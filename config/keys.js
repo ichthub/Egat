@@ -4,5 +4,3 @@ const keys =
   process.env.NODE_ENV === "production"
     ? require("./prodkeys")
     : require("./devKeys");
-
-export default keys;
