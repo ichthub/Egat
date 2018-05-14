@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
-import * as actions from "../actions/index";
-import "./App.css";
-import Header from "./Header";
-import Landing from "./Landing";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import * as actions from '../actions/index';
+import './App.css';
+import Header from './Header';
+import Landing from './Landing';
 
 const Dashboard = () => <h2>Dashboard Page</h2>;
 const SurveyNew = () => <h2>SurveyNew Page</h2>;

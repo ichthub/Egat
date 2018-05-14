@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import './index.css';
 import reducers from './reducers';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
@@ -22,4 +22,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-registerServiceWorker();
+// registerServiceWorker();
