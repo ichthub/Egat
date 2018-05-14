@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {BrowserRouter, Route} from "react-router-dom";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
 import * as actions from "../actions/index";
 import "./App.css";
 import Header from "./Header";
@@ -31,6 +31,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fetchUser: PropTypes.func,
+  fetchUser: PropTypes.func
 };
 export default connect(null, actions)(App);

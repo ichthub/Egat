@@ -23,7 +23,6 @@ app.use(passport.session());
 // authRoutes(app); same as require("./routes/authRoutes")(app);
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
-/*
 
 if (process.env.NODE_ENV === 'production') {
   // handle routes in production
@@ -34,7 +33,8 @@ if (process.env.NODE_ENV === 'production') {
     // if the url is not recognizable by express, serve index.html
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-} */
+}
+
 /* 
 dynamic port bounding
 process.env.PORT is an environement var

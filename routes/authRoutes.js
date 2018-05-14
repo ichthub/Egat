@@ -6,18 +6,18 @@ const passport = require('passport');
 */
 module.exports = app => {
   // rout handler
-  /*
   app.get(
     '/auth/google',
     passport.authenticate('google', {
       scope: ['profile', 'email']
     })
   );
-  */
+
+  /*
   app.get('/auth/google', (req, res) => {
     res.send('from auth/google');
   });
-
+*/
   app.get(
     '/auth/google/callback',
     passport.authenticate('google'),
@@ -27,7 +27,8 @@ module.exports = app => {
   );
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.redirect('/'); // destroyes the key inside cookie
+    // res.redirect('/'); // destroyes the key inside cookie
+    res.send('hasssn');
   });
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
