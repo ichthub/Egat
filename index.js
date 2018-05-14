@@ -26,11 +26,12 @@ require('./routes/billingRoutes')(app);
 if (process.env.NODE_ENV === 'production') {
   // handle routes in production
   app.use(express.static('client/build')); // serving production assets like main.js and main.css
-  const path = require('path');
-  app.get('*', (req, res) => {
-    // if the url is not recognizable by express, serve index.html
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
+  // const path = require('path');
+  /*
+    app.get('*', (req, res) => {
+      if the url is not recognizable by express, serve index.html
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  }); */
 }
 /* 
 dynamic port bounding

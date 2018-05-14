@@ -1,4 +1,4 @@
-const passport = require("passport");
+const passport = require('passport');
 /*
  whene the user navigates to the this route fire authenticate func with GoogleSrategy.
  GoogleStrategy has an internal identifier which is google we pass to the authenticate func.
@@ -7,23 +7,23 @@ const passport = require("passport");
 module.exports = app => {
   // rout handler
   app.get(
-    "/auth/google",
-    passport.authenticate("google", {
-      scope: ["profile", "email"],
-    }),
+    '/auth/google',
+    passport.authenticate('google', {
+      scope: ['profile', 'email']
+    })
   );
   app.get(
-    "/auth/google/callback",
-    passport.authenticate("google"),
+    '/auth/google/callback',
+    passport.authenticate('google'),
     (req, res) => {
-      res.redirect("/surveys");
-    },
+      res.redirect('/surveys');
+    }
   );
-  app.get("/api/logout", (req, res) => {
+  app.get('/api/logout', (req, res) => {
     req.logout();
-    res.redirect("/"); // destroyes the key inside cookie
+    res.redirect('/'); // destroyes the key inside cookie
   });
-  app.get("/api/current_user", (req, res) => {
+  app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });
 };
