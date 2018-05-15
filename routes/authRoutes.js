@@ -13,11 +13,6 @@ module.exports = app => {
     })
   );
 
-  /*
-  app.get('/auth/google', (req, res) => {
-    res.send('from auth/google');
-  });
-*/
   app.get(
     '/auth/google/callback',
     passport.authenticate('google'),
@@ -25,11 +20,12 @@ module.exports = app => {
       res.redirect('/surveys');
     }
   );
+
   app.get('/api/logout', (req, res) => {
     req.logout();
-    // res.redirect('/'); // destroyes the key inside cookie
-    res.send('hasssn');
+    res.redirect('/'); // destroyes the key inside cookie
   });
+  
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });

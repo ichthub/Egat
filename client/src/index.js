@@ -8,7 +8,7 @@ import App from './components/App';
 import './index.css';
 import reducers from './reducers';
 import { unregister } from './registerServiceWorker';
-// import registerServiceWorker from './registerServiceWorker';
+
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
@@ -23,5 +23,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-// registerServiceWorker();
+
 unregister();
