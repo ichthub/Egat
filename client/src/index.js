@@ -1,3 +1,4 @@
+import axios from 'axios';
 import 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -7,9 +8,8 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import './index.css';
 import reducers from './reducers';
-import { unregister } from './registerServiceWorker';
 
-
+window.axios = axios;
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   reducers,
@@ -23,5 +23,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-unregister();

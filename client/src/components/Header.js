@@ -60,6 +60,6 @@ Header.propTypes = {
 };
 
 const mapStateToProps = ({ auth }) => ({ auth });
-// this is equal to {auth; state.auth}
+// this is equal to {auth: state.auth}
 
 export default connect(mapStateToProps)(Header);

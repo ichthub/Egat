@@ -3,7 +3,7 @@ const stripe = require('stripe')(keys.stripeSecretKey);
 const requireLogin = require('../middleWares/requireLogin');
 // this is how you build a charge to a customer
 module.exports = app => {
-  // request will passed to requireLogin middleware before it went to routHandler
+  // request will be passed to requireLogin middleware before it went to routHandler
   app.post('/api/stripe', requireLogin, async (req, res) => {
     const charge = await stripe.charges.create({
       amount: 500,
