@@ -19,12 +19,7 @@ const options = {
   bufferMaxEntries: 0
 };
 
-mongoose.connect(keys.mongoURI, options).then(() => {
-  console.log('connected to DB is successful'),
-    err => {
-      console.log('this is an error from mLab', err);
-    };
-});
+mongoose.connect(keys.mongoURI, options);
 const app = express();
 app.use(bodyParser.json()); // parse body of req and assign it to req.body obj
 app.use(
